@@ -1,0 +1,18 @@
+
+
+name: Test React App 
+on: workflow_dispatch 
+jobs: 
+  test:
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Code 
+        uses: actions/checkout@v3 
+      - name: Install Node v20.15
+        uses: actions/setup-node@v3 
+        with:
+          node-version: 20.15 
+      - name: Insstall 
+        run: npm install 
+      - name: Test 
+        run: npm run test
