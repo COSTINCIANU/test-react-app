@@ -1,15 +1,19 @@
-
-
-name: Test React App 
-on: 
+name: Test Resact App
+on:
+  pull_request:
+    types:
+     - opened
   workflow_dispatch:
   push:
     branches:
       - main 
-  pull_request:
-    types: 
-      - opened
-      
+      - 'hotfix-*'
+      - 'feature/**' 
+    paths-ignore:
+      - '.github/workflows/*'
+# ex : hotfix-fix-wording 
+# ex : feature/user/update
+
 jobs: 
   test:
     runs-on: ubuntu-latest 
@@ -24,3 +28,5 @@ jobs:
         run: npm install 
       - name: Test 
         run: npm run test
+
+      
