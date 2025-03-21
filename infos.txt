@@ -1,3 +1,13 @@
 npx create-react-app   react-app
 cd react-app 
+
 npm start
+http://localhost:3000/
+
+
+
+
+
+
+A telecharger par la sute metre a jour
+npm install -g npm@11.2.0
